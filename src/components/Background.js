@@ -5,6 +5,7 @@ import Home from './Home';
 import About from './About';
 import Skills from './Skills';
 import Projects from './Projects';
+import Contact from './Contact';
 import FadeInWhenVisible from './FadeInWhenVisible';
 
 const getNumShapes = () => {
@@ -217,6 +218,9 @@ const Background = () => {
           </FadeInWhenVisible>
           <FadeInWhenVisible>
             <Projects />
+          </FadeInWhenVisible>
+          <FadeInWhenVisible>
+            <Contact />
           </FadeInWhenVisible>
         </div>
       </div>
