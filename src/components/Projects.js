@@ -26,7 +26,7 @@ const Project = ({
       {isMobile ? (
         <img
           src={imageUrl}
-          alt="project image"
+          alt="project"
           className="object-cover mb-4 shadow-lg"
         />
       ) : (
