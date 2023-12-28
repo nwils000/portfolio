@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { gsap } from 'gsap';
+import Navbar from './Navbar';
 import Home from './Home';
 import FadeInWhenVisible from './FadeInWhenVisible';
 
@@ -201,7 +202,7 @@ const Background = () => {
               />
             </div>
           )}
-
+          <Navbar />
           <FadeInWhenVisible>
             <Home />
           </FadeInWhenVisible>
