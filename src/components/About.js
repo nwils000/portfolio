@@ -42,7 +42,7 @@ const About = () => {
         <p className="p-6 text-lg leading-10 lg:leading-10 lg:text-2xl">
           Specializing in React and Node, I develop dynamic and efficient web
           applications. My diverse background, including leadership roles in
-          cheerleading coaching and missionary work, has honed my skills in team
+          cheer coaching and missionary work, has honed my skills in team
           collaboration and project management. Combined with my experience in
           collaborative web development, these experiences have equipped me to
           contribute significantly to innovative and challenging tech projects.
