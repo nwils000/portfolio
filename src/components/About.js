@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaFacebook, FaInstagram } from 'react-icons/fa';
-import Skills from './Skills';
 
 const About = () => {
   const socialLinks = [
