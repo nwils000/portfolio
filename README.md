@@ -9,8 +9,8 @@ You can visit the live website [https://nathanwilson.dev].
 The portfolio was created using the following technologies:
 
 - **React**: a popular JavaScript library for building user interfaces.
-- **Tailwind CSS**: a utility-first CSS framework packed with classes like `flex`, `pt-4`, `text-center` and `rotate-90` that can be composed to build any design, directly in your markup.
-- **Netlify**: a cloud-based hosting and continuous deployment platform, used here for deploying the Next.js application.
+- **Tailwind CSS**: a utility-first CSS framework.
+- **Netlify**: a cloud-based hosting and continuous deployment platform.
 - **Git**: a version control system used for tracking code changes.
 
 ## Setup
