@@ -1,0 +1,155 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.neon-shadow-blue {
+  text-shadow: 0 0 10px #00e6e6, 0 0 20px #00e;
+}
+
+.fade-enter {
+  transform: translateX(-100%);
+}
+
+.fade-enter-active {
+  transform: translateX(0);
+  transition: transform 2000ms;
+}
+
+.fade-exit {
+  transform: translateX(0);
+}
+
+.fade-exit-active {
+  transform: translateX(-100%);
+  transition: transform 2000ms;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.skills-section {
+  color: #fff;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.skill-category {
+  margin-bottom: 30px;
+  text-align: center;
+  flex: 0 0 calc(33.333% - 30px);
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.skill-card {
+  background-color: #fff;
+  color: rgb(25, 0, 255);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.skill-item {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.slider-horizontal {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.slider-horizontal::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: linear-gradient(to right, #4a5568, #2d3748);
+  border-radius: 9999px;
+}
+
+.slider-horizontal::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 2px solid #1a202c;
+  cursor: pointer;
+  margin-top: -8px;
+  transition: opacity 0.2s;
+}
+
+.slider-horizontal::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: linear-gradient(to right, #4a5568, #2d3748);
+  border-radius: 9999px;
+}
+
+.slider-horizontal::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 2px solid #1a202c;
+  cursor: pointer;
+  margin-top: -8px;
+  transition: opacity 0.2s;
+}
+
+.slider-horizontal:hover::-webkit-slider-thumb,
+.slider-horizontal:hover::-moz-range-thumb {
+  opacity: 1;
+}
