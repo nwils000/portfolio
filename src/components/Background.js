@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 import Navbar from './Navbar';
 import Home from './Home';
+import About from './About';
+import Skills from './Skills';
+import Projects from './Projects';
 import FadeInWhenVisible from './FadeInWhenVisible';
 
 const getNumShapes = () => {
@@ -205,6 +208,15 @@ const Background = () => {
           <Navbar />
           <FadeInWhenVisible>
             <Home />
+          </FadeInWhenVisible>
+          <FadeInWhenVisible>
+            <About />
+          </FadeInWhenVisible>
+          <FadeInWhenVisible>
+            <Skills />
+          </FadeInWhenVisible>
+          <FadeInWhenVisible>
+            <Projects />
           </FadeInWhenVisible>
         </div>
       </div>
