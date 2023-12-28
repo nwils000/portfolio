@@ -6,9 +6,9 @@ import FadeInWhenVisible from './FadeInWhenVisible';
 const getNumShapes = () => {
   if (typeof window === 'undefined') return 10;
   const screenWidth = window.innerWidth;
-  if (screenWidth <= 640) return 5; // Mobile screens
-  if (screenWidth <= 1024) return 7; // Tablet screens
-  return 10; // Larger screens
+  if (screenWidth <= 640) return 5;
+  if (screenWidth <= 1024) return 7;
+  return 10;
 };
 
 const NUM_SHAPES = getNumShapes();
@@ -125,7 +125,7 @@ const Slider = ({ label, min, max, step, value, onChange }) => {
 const Background = () => {
   // State for sliders
   const [squareSize, setSquareSize] = useState(5);
-  const [squareSpeed, setSquareSpeed] = useState(1);
+  const [squareSpeed, setSquareSpeed] = useState(0.5);
   const [squareAmount, setSquareAmount] = useState(NUM_SHAPES);
 
   // State for window width
@@ -178,7 +178,7 @@ const Background = () => {
               <Slider
                 label="Size"
                 min={5}
-                max={100}
+                max={40}
                 value={squareSize}
                 onChange={handleSizeChange}
                 step={0}
