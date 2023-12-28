@@ -28,8 +28,8 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 z-50 px-2 text-white sm:px-4 md:px-8 lg:px-12 xl:px-16">
-      <div className="fixed top-0 right-0 p-4 sm:p-8 lg:p-12 xl:p-16">
-        <button className="md:hidden" onClick={toggleModal}>
+      <div className="md:hidden fixed top-0 right-0 p-4 sm:p-8 lg:p-12 xl:p-16">
+        <button onClick={toggleModal}>
           {isOpen ? (
             <FaTimes className="text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl" />
           ) : (

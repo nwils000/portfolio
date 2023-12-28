@@ -94,7 +94,7 @@ const Projects = () => {
       videoUrl:
         'https://res.cloudinary.com/dwonrd0xx/video/upload/v1686259321/Portfolio/Nathan_Wilson_-_Portfolio_-_AVG_Secure_Browser_2023-06-08_17-18-59_aejpbx.mp4',
       liveLink: 'https://nathanwilson.dev',
-      githubLink: 'https://github.com/nwils000/my-portfolio',
+      githubLink: 'https://github.com/nwils000/portfolio',
     },
     {
       title: 'Web Design Agency',
