@@ -105,7 +105,7 @@ const Projects = () => {
       videoUrl:
         'https://res.cloudinary.com/dwonrd0xx/video/upload/c_scale/v1/Portfolio/ignite_qv6vwk.webm',
       liveLink: 'https://igniteky.com',
-      githubLink: 'https://github.com/nwils000/amazon-clone-app',
+      githubLink: 'https://github.com/nwils000/takeoff',
     },
     {
       title: 'Amazon.com Clone',
@@ -118,7 +118,7 @@ const Projects = () => {
       githubLink: 'https://github.com/nwils000/amazon-clone-app',
     },
     {
-      title: 'Birthday News Stories App',
+      title: 'Birthday Stories App',
       description: "An app that fetches news stories based on user's birthday.",
       imageUrl:
         'https://res.cloudinary.com/dwonrd0xx/image/upload/c_scale/v1/Portfolio/Screenshot_132_bcaoky.png',
