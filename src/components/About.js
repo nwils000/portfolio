@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaFacebook, FaInstagram } from 'react-icons/fa';
+import Skills from './Skills';
 
 const About = () => {
   const socialLinks = [
@@ -40,12 +41,12 @@ const About = () => {
         }}
       >
         <p className="p-6 text-lg leading-10 lg:leading-10 lg:text-2xl">
-          I'm Nathan, a front-end developer with over 3 years of experience in
-          JavaScript, React, and Node. I've lead development teams and actively
-          participated in various projects, and I'm skilled in DevOps,
-          accessibility, API integration, and SEO. I'm passionate about the
-          end-to-end process of web development, from designing intuitive UIs to
-          ensuring optimal performance and user experiences.
+          Specializing in React and Node, I develop dynamic and efficient web
+          applications. My diverse background, including leadership roles in
+          cheerleading coaching and missionary work, has honed my skills in team
+          collaboration and project management. Combined with my experience in
+          collaborative web development, these experiences have equipped me to
+          contribute significantly to innovative and challenging tech projects.
         </p>
       </div>
       <div className="flex justify-center mt-6 space-x-2 md:space-x-4">
