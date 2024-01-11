@@ -105,7 +105,7 @@ const Projects = () => {
       videoUrl:
         "https://res.cloudinary.com/dwonrd0xx/video/upload/c_scale/v1/Portfolio/ignite_qv6vwk.webm",
       liveLink: "https://igniteky.com",
-      githubLink: "https://github.com/nwils000/takeoff",
+      githubLink: "https://github.com",
     },
     {
       title: "Amazon.com Clone",
