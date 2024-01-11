@@ -141,7 +141,7 @@ const Projects = () => {
     {
       title: "Site Scout - SEO Tool",
       description:
-        "Site Scout is a tool designed to scrape websites and display relevant code that requires fixes for SEO optimization.",
+        "Site Scout is a tool I contributed to that is designed to scrape websites and display relevant code that requires fixes for SEO optimization.",
       imageUrl:
         "https://res.cloudinary.com/dwonrd0xx/image/upload/v1705006359/Portfolio/Screenshot_158_jd8k6y.png",
       videoUrl:
