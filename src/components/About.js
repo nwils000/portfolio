@@ -40,8 +40,7 @@ const About = () => {
         }}
       >
         <p className="p-6 text-lg leading-10 lg:leading-10 lg:text-2xl">
-          My specialties are React and Node. My diverse background, including leadership roles in
-          cheer coaching and missionary work, have helped me to develop strong skills in team
+          I specialize in React and Node. My diverse background in leadership roles such as cheer coaching and missionary work, have helped me to develop strong skills in team
           collaboration and project management. Combined with my experience developing products such as an SEO tool and Web Development Agency, has equipped me to
           contribute significantly to innovative and challenging tech projects.
         </p>
