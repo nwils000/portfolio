@@ -23,21 +23,13 @@ const Skills = () => {
   const skills = [
     {
       category: 'Languages',
-      items: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
+      items: ['HTML', 'CSS', 'JavaScript', 'Python'],
       icon: <FaCode className="mb-4 text-6xl text-white" />,
       color: 'from-blue-500 to-blue-700',
     },
     {
       category: 'Frameworks & Libraries',
-      items: [
-        'React',
-        'Node.js',
-        'Next.js',
-        'Redux',
-        'Express',
-        'Bootstrap',
-        'Tailwind CSS',
-      ],
+      items: ['React', 'Django', 'Express', 'Bootstrap', 'Tailwind'],
       icon: <FaLaptopCode className="mb-4 text-6xl text-white" />,
       color: 'from-green-500 to-green-700',
     },
@@ -46,10 +38,10 @@ const Skills = () => {
       items: [
         'Git',
         'VSCode',
-        'AWS',
-        'Firebase',
         'Netlify',
         'Vercel',
+        'Fly',
+        'Firebase',
         'MongoDB',
         'Docker',
       ],
