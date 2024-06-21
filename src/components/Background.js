@@ -134,7 +134,6 @@ const Background = () => {
   const [squareSpeed, setSquareSpeed] = useState(0.5);
   const [squareAmount, setSquareAmount] = useState(NUM_SHAPES);
 
-  // State for window width
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {

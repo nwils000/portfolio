@@ -23,7 +23,7 @@ const Skills = () => {
   const skills = [
     {
       category: 'Languages',
-      items: ['HTML', 'CSS', 'JavaScript', 'Python'],
+      items: ['HTML', 'CSS', 'JavaScript', 'Python', 'SQL'],
       icon: <FaCode className="mb-4 text-6xl text-white" />,
       color: 'from-blue-500 to-blue-700',
     },
