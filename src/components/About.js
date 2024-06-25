@@ -40,13 +40,14 @@ const About = () => {
         }}
       >
         <p className="p-6 text-lg leading-10 lg:leading-10 lg:text-2xl">
-          I specialize in React and Django, having completed a full stack web
-          developer bootcamp. My background in leadership roles such as
-          cheer coaching and missionary work has helped me to develop strong
-          skills in team collaboration and project management. Combined with my
-          experience developing products such as an SEO tool and running a Web
-          Development Agency, I am equipped to contribute significantly to
-          innovative and challenging tech projects.
+          I specialize in React and Django, having graduated from the Awesome
+          Inc full stack web development bootcamp in June 2024. My background in
+          leadership roles, including cheer coaching and missionary work, has
+          given me skills in team collaboration and project management.
+          Additionally, my experience in developing software like a family
+          allowance system, as well as managing a Web Development Agency, gives
+          me a unique set of capabilities that enhance my effectiveness as a
+          developer.
         </p>
       </div>
       <div className="flex justify-center mt-6 space-x-2 md:space-x-4">
