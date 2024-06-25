@@ -115,7 +115,7 @@ const Projects = () => {
       githubLink: 'https://github.com/nwils000/amazon-clone-app',
     },
     {
-      title: 'Social Media App',
+      title: 'Social Media',
       description:
         'Full-stack social media app built with Django and React, offering standard features like profiles, posts, and interactions.',
       imageUrl:

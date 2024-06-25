@@ -41,7 +41,7 @@ const About = () => {
       >
         <p className="p-6 text-lg leading-10 lg:leading-10 lg:text-2xl">
           I specialize in React and Django, having completed a full stack web
-          developer bootcamp. My diverse background in leadership roles such as
+          developer bootcamp. My background in leadership roles such as
           cheer coaching and missionary work has helped me to develop strong
           skills in team collaboration and project management. Combined with my
           experience developing products such as an SEO tool and running a Web

@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { gsap } from 'gsap';
+import React, { useState, useEffect, useRef } from 'react';
 import Navbar from './Navbar';
 import Home from './Home';
 import About from './About';
@@ -10,11 +9,7 @@ import Footer from './Footer';
 import FadeInWhenVisible from './FadeInWhenVisible';
 
 const getNumShapes = () => {
-  if (typeof window === 'undefined') return 10;
-  const screenWidth = window.innerWidth;
-  if (screenWidth <= 640) return 5;
-  if (screenWidth <= 1024) return 7;
-  return 10;
+  return 5;
 };
 
 const NUM_SHAPES = getNumShapes();
@@ -40,63 +35,57 @@ const getRandomOpacity = () => {
 };
 
 const Square = ({ backgroundColor, size, speed }) => {
-  const [position, setPosition] = useState(getRandomPosition(size));
-  const [velocity, setVelocity] = useState({
-    x: getRandomVelocity(),
-    y: getRandomVelocity(),
+  const [squareState, setSquareState] = useState({
+    position: getRandomPosition(size),
+    velocity: { x: getRandomVelocity(), y: getRandomVelocity() },
+    opacity: getRandomOpacity(), // Initialize opacity
   });
-  const [opacity, setOpacity] = useState(getRandomOpacity);
+  const requestRef = useRef();
+
+  const updatePosition = () => {
+    const { position, velocity } = squareState;
+    const newX = position.x + velocity.x * speed;
+    const newY = position.y + velocity.y * speed;
+    const maxX = window.innerWidth - size;
+    const maxY = window.innerHeight - size;
+
+    const newVelocity = { ...velocity };
+    if (newX < 0 || newX > maxX) {
+      newVelocity.x *= -1;
+    }
+    if (newY < 0 || newY > maxY) {
+      newVelocity.y *= -1;
+    }
+
+    // Update position and velocity only, keep opacity stable
+    setSquareState((prevState) => ({
+      position: { x: newX, y: newY },
+      velocity: newVelocity,
+      opacity: prevState.opacity, // Maintain existing opacity
+    }));
+  };
 
   useEffect(() => {
-    const updatePosition = () => {
-      const newX = position.x + velocity.x * speed;
-      const newY = position.y + velocity.y * speed;
-      const maxX = window.innerWidth - size;
-      const maxY = window.innerHeight - size;
-      const newVelocity = { x: velocity.x, y: velocity.y };
-
-      if (newX < 0 || newX > maxX) {
-        newVelocity.x *= -1;
-      }
-      if (newY < 0 || newY > maxY) {
-        newVelocity.y *= -1;
-      }
-
-      const minOpacity = 0.3;
-      const maxOpacity = 1;
-      const opacityRange = maxOpacity - minOpacity;
-      const oscillationSpeed = 0.005;
-      const oscillationValue = Math.sin(
-        newX * oscillationSpeed + newY * oscillationSpeed
-      );
-      const newOpacity =
-        minOpacity + (oscillationValue + 1) * 0.5 * opacityRange;
-
-      setOpacity(newOpacity);
-      setVelocity(newVelocity);
-      setPosition({ x: newX, y: newY });
+    const animate = () => {
+      updatePosition();
+      requestRef.current = requestAnimationFrame(animate);
     };
 
-    const animation = gsap.to(
-      {},
-      {
-        repeat: -1,
-        duration: 1 / 60,
-        onUpdate: updatePosition,
-      }
-    );
-
-    return () => {
-      animation.kill();
-    };
-  }, [position, velocity, size, speed]);
+    requestRef.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(requestRef.current);
+  }, [squareState, size, speed]);
 
   return (
     <svg
       width={size}
       height={size}
       className="absolute top-0 left-0 bg-purple-600 border-none"
-      style={{ top: position.y, left: position.x, opacity: opacity }}
+      style={{
+        top: squareState.position.y,
+        left: squareState.position.x,
+        opacity: squareState.opacity,
+        transition: 'opacity 0.5s', // Smooth transition for opacity changes
+      }}
     >
       <rect className="fill-none" x="0" y="0" width={size} height={size} />
     </svg>
@@ -174,9 +163,9 @@ const Background = () => {
   return (
     <>
       <div className="fixed inset-0 z-0 bg-gradient-to-r from-gray-800 to-gray-900">
-        {squares}
+        {/* {squares} */}
         <div className="relative z-10 flex flex-col w-screen h-screen gap-20 overflow-auto">
-          {windowWidth > 767 && (
+          {/* {windowWidth > 767 && (
             <div className="absolute top-0 right-0 z-50 p-4">
               <Slider
                 label="Size"
@@ -184,7 +173,7 @@ const Background = () => {
                 max={40}
                 value={squareSize}
                 onChange={handleSizeChange}
-                step={0}
+                step={5}
               />
               <Slider
                 label="Speed"
@@ -197,13 +186,13 @@ const Background = () => {
               <Slider
                 label="Square Amount"
                 min={0}
-                max={20}
+                max={10}
                 value={squareAmount}
                 onChange={handleAmountChange}
-                step={0}
+                step={1}
               />
             </div>
-          )}
+          )} */}
           <Navbar />
           <FadeInWhenVisible>
             <Home />
