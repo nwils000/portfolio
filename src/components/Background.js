@@ -38,7 +38,7 @@ const Square = ({ backgroundColor, size, speed }) => {
   const [squareState, setSquareState] = useState({
     position: getRandomPosition(size),
     velocity: { x: getRandomVelocity(), y: getRandomVelocity() },
-    opacity: getRandomOpacity(), // Initialize opacity
+    opacity: getRandomOpacity(),
   });
   const requestRef = useRef();
 
@@ -57,11 +57,10 @@ const Square = ({ backgroundColor, size, speed }) => {
       newVelocity.y *= -1;
     }
 
-    // Update position and velocity only, keep opacity stable
     setSquareState((prevState) => ({
       position: { x: newX, y: newY },
       velocity: newVelocity,
-      opacity: prevState.opacity, // Maintain existing opacity
+      opacity: prevState.opacity,
     }));
   };
 
@@ -84,7 +83,7 @@ const Square = ({ backgroundColor, size, speed }) => {
         top: squareState.position.y,
         left: squareState.position.x,
         opacity: squareState.opacity,
-        transition: 'opacity 0.5s', // Smooth transition for opacity changes
+        transition: 'opacity 0.5s',
       }}
     >
       <rect className="fill-none" x="0" y="0" width={size} height={size} />
