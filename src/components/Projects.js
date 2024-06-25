@@ -134,7 +134,7 @@ const Projects = () => {
       videoUrl:
         'https://res.cloudinary.com/dwonrd0xx/video/upload/v1719325133/Screen_Recording_2024-06-25_094747_soduqq.mp4',
       liveLink: 'https://kid-kapital.vercel.app/',
-      githubLink: 'https://github.com/nwils000/family-finance',
+      githubLink: 'https://github.com/nwils000/kid-kapital',
     },
     {
       title: 'Site Scout - SEO Tool',
