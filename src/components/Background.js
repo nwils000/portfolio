@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+// import React, { useState, useEffect, useRef } from 'react';
 import Navbar from './Navbar';
 import Home from './Home';
 import About from './About';
@@ -8,11 +8,11 @@ import Contact from './Contact';
 import Footer from './Footer';
 import FadeInWhenVisible from './FadeInWhenVisible';
 
-const getNumShapes = () => {
-  return 5;
-};
+// const getNumShapes = () => {
+//   return 5;
+// };
 
-const NUM_SHAPES = getNumShapes();
+// const NUM_SHAPES = getNumShapes();
 
 // const getRandomPosition = (size) => {
 //   let maxX = 1000;
