@@ -62,7 +62,6 @@ const Square = ({ backgroundColor, size, speed }) => {
         newVelocity.y *= -1;
       }
 
-      // Oscillate opacity between 0.3 and 1 using a sine function
       const minOpacity = 0.3;
       const maxOpacity = 1;
       const opacityRange = maxOpacity - minOpacity;
@@ -129,7 +128,6 @@ const Slider = ({ label, min, max, step, value, onChange }) => {
 };
 
 const Background = () => {
-  // State for sliders
   const [squareSize, setSquareSize] = useState(5);
   const [squareSpeed, setSquareSpeed] = useState(0.5);
   const [squareAmount, setSquareAmount] = useState(NUM_SHAPES);

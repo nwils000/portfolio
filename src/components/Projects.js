@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef } from "react";
-import { ChevronRightIcon } from "@heroicons/react/outline";
+import { useEffect, useState, useRef } from 'react';
+import { ChevronRightIcon } from '@heroicons/react/outline';
 
 const Project = ({
   title,
@@ -72,82 +72,80 @@ const Projects = () => {
       setIsMobile(window.innerWidth <= 980);
     }
 
-    // Set the initial value
     handleResize();
 
-    // Add event listener
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
-    // Remove event listener on cleanup
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
   const projectsData = [
     {
-      title: "Portfolio",
+      title: 'Portfolio',
       description:
-        "A personal showcase of my skills and projects, built with Next.js and TypeScript.",
+        'A personal showcase of my skills and projects, built with Next.js and TypeScript.',
       imageUrl:
-        "https://res.cloudinary.com/dwonrd0xx/image/upload/v1686259301/Portfolio/Screenshot_138_on6erl.png",
+        'https://res.cloudinary.com/dwonrd0xx/image/upload/v1686259301/Portfolio/Screenshot_138_on6erl.png',
       videoUrl:
-        "https://res.cloudinary.com/dwonrd0xx/video/upload/v1686259321/Portfolio/Nathan_Wilson_-_Portfolio_-_AVG_Secure_Browser_2023-06-08_17-18-59_aejpbx.mp4",
-      liveLink: "https://nathanwilson.dev",
-      githubLink: "https://github.com/nwils000/portfolio",
+        'https://res.cloudinary.com/dwonrd0xx/video/upload/v1686259321/Portfolio/Nathan_Wilson_-_Portfolio_-_AVG_Secure_Browser_2023-06-08_17-18-59_aejpbx.mp4',
+      liveLink: 'https://nathanwilson.dev',
+      githubLink: 'https://github.com/nwils000/portfolio',
     },
     {
-      title: "Web Design Agency",
+      title: 'Web Design Agency',
       description:
-        "A web design agency site featuring a contact form and an active blog.",
+        'A web design agency site featuring a contact form and an active blog.',
       imageUrl:
-        "https://res.cloudinary.com/dwonrd0xx/image/upload/c_scale/v1/Portfolio/Screenshot_136_ubecz7.png",
+        'https://res.cloudinary.com/dwonrd0xx/image/upload/c_scale/v1/Portfolio/Screenshot_136_ubecz7.png',
       videoUrl:
-        "https://res.cloudinary.com/dwonrd0xx/video/upload/c_scale/v1/Portfolio/ignite_qv6vwk.webm",
-      liveLink: "https://igniteky.com",
-      githubLink: "https://github.com",
+        'https://res.cloudinary.com/dwonrd0xx/video/upload/c_scale/v1/Portfolio/ignite_qv6vwk.webm',
+      liveLink: 'https://igniteky.com',
+      githubLink: 'https://github.com',
     },
     {
-      title: "Amazon.com Clone",
-      description: "An e-commerce platform clone designed with React and CSS.",
+      title: 'Amazon.com Clone',
+      description: 'An e-commerce platform clone designed with React and CSS.',
       imageUrl:
-        "https://res.cloudinary.com/dwonrd0xx/image/upload/c_scale/v1/Portfolio/Screenshot_133_pg7id1.png",
+        'https://res.cloudinary.com/dwonrd0xx/image/upload/c_scale/v1/Portfolio/Screenshot_133_pg7id1.png',
       videoUrl:
-        "https://res.cloudinary.com/dwonrd0xx/video/upload/c_scale/v1/Portfolio/amzin_sdnkk6.webm",
-      liveLink: "https://amzin-clone.netlify.app/",
-      githubLink: "https://github.com/nwils000/amazon-clone-app",
+        'https://res.cloudinary.com/dwonrd0xx/video/upload/c_scale/v1/Portfolio/amzin_sdnkk6.webm',
+      liveLink: 'https://amzin-clone.netlify.app/',
+      githubLink: 'https://github.com/nwils000/amazon-clone-app',
     },
     {
-      title: "Birthday Stories App",
-      description: "An app that fetches news stories based on user's birthday.",
-      imageUrl:
-        "https://res.cloudinary.com/dwonrd0xx/image/upload/c_scale/v1/Portfolio/Screenshot_132_bcaoky.png",
-      videoUrl:
-        "https://res.cloudinary.com/dwonrd0xx/video/upload/c_scale/v1/Portfolio/bday_tmlenx.webm",
-      liveLink: "https://birthday-historical-data.netlify.app/",
-      githubLink: "https://github.com/nwils000/birthday-data-app",
-    },
-    {
-      title: "Flashcard Generator App",
+      title: 'Social Media App',
       description:
-        "A user-friendly flashcard creation tool showcasing complex CSS styling.",
+        'Full-stack social media app built with Django and React, offering standard features like profiles, posts, and interactions.',
       imageUrl:
-        "https://res.cloudinary.com/dwonrd0xx/image/upload/c_scale/v1/Portfolio/Screenshot_134_uzb7ui.png",
+        'https://res.cloudinary.com/dwonrd0xx/image/upload/v1719325690/Screenshot_2024-06-25_102637_cndweq.png',
       videoUrl:
-        "https://res.cloudinary.com/dwonrd0xx/video/upload/c_scale/v1/Portfolio/flash_f0hzat.webm",
-      liveLink: "https://nathans-flashcard-app.netlify.app/",
-      githubLink: "https://github.com/nwils000/flashcard-app",
+        'https://res.cloudinary.com/dwonrd0xx/video/upload/v1719325173/Screen_Recording_2024-06-25_100158_alwrgx.mp4',
+      liveLink: 'https://social-media-client-snowy.vercel.app/',
+      githubLink: 'https://github.com/nwils000/social-media-client',
     },
     {
-      title: "Site Scout - SEO Tool",
+      title: 'Kid Kapital',
       description:
-        "Site Scout is a tool I contributed to that is designed to scrape websites and display relevant code that requires fixes for SEO optimization.",
+        'Bootcamp capstone project: a full-stack app designed for families to manage children’s allowances."',
       imageUrl:
-        "https://res.cloudinary.com/dwonrd0xx/image/upload/v1705006359/Portfolio/Screenshot_158_jd8k6y.png",
+        'https://res.cloudinary.com/dwonrd0xx/image/upload/v1719325677/Screenshot_2024-06-25_102701_ifmir7.png',
       videoUrl:
-        "https://res.cloudinary.com/dwonrd0xx/video/upload/v1705006013/Portfolio/App_Site_Scout_-_Google_Chrome_2024-01-11_15-42-27_tihkre.mp4",
-      liveLink: "https://sitescout.pro",
-      githubLink: "https://github.com/",
+        'https://res.cloudinary.com/dwonrd0xx/video/upload/v1719325133/Screen_Recording_2024-06-25_094747_soduqq.mp4',
+      liveLink: 'https://kid-kapital.vercel.app/',
+      githubLink: 'https://github.com/nwils000/family-finance',
+    },
+    {
+      title: 'Site Scout - SEO Tool',
+      description:
+        'Site Scout is a tool I contributed to that is designed to scrape websites and display relevant code that requires fixes for SEO optimization.',
+      imageUrl:
+        'https://res.cloudinary.com/dwonrd0xx/image/upload/v1705006359/Portfolio/Screenshot_158_jd8k6y.png',
+      videoUrl:
+        'https://res.cloudinary.com/dwonrd0xx/video/upload/v1705006013/Portfolio/App_Site_Scout_-_Google_Chrome_2024-01-11_15-42-27_tihkre.mp4',
+      liveLink: 'https://sitescout.pro',
+      githubLink: 'https://github.com/',
     },
   ];
 
@@ -183,16 +181,16 @@ const Projects = () => {
                     key={index}
                     className={`flex items-center justify-start space-x-2 p-2 rounded-lg ${
                       index === currentSlide
-                        ? "text-blue-500 font-semibold"
-                        : "text-white hover:font-semibold"
+                        ? 'text-blue-500 font-semibold'
+                        : 'text-white hover:font-semibold'
                     }`}
                     onClick={() => handleProjectSelection(index)}
                   >
                     <ChevronRightIcon
                       className={`w-5 h-5 ${
                         index === currentSlide
-                          ? "text-blue-500"
-                          : "text-white hover:text-blue-500"
+                          ? 'text-blue-500'
+                          : 'text-white hover:text-blue-500'
                       }`}
                     />
                     {project.title}
@@ -206,8 +204,8 @@ const Projects = () => {
                   key={index}
                   className={`${
                     index === currentSlide
-                      ? "block transition-all duration-1000"
-                      : "hidden"
+                      ? 'block transition-all duration-1000'
+                      : 'hidden'
                   }`}
                   ref={(el) => (projectsRef.current[index] = el)}
                 >
@@ -231,16 +229,16 @@ const Projects = () => {
                     key={index}
                     className={`flex items-center justify-start space-x-2 p-2 rounded-lg ${
                       index === currentSlide
-                        ? "text-blue-500 font-semibold"
-                        : "text-white hover:font-semibold"
+                        ? 'text-blue-500 font-semibold'
+                        : 'text-white hover:font-semibold'
                     }`}
                     onClick={() => handleProjectSelection(index)}
                   >
                     <ChevronRightIcon
                       className={`w-5 h-5 ${
                         index === currentSlide
-                          ? "text-blue-500"
-                          : "text-white hover:text-blue-500"
+                          ? 'text-blue-500'
+                          : 'text-white hover:text-blue-500'
                       }`}
                     />
                     {project.title}
@@ -252,7 +250,7 @@ const Projects = () => {
               {projectsData.map((project, index) => (
                 <div
                   key={index}
-                  className={`${index === currentSlide ? "block" : "hidden"}`}
+                  className={`${index === currentSlide ? 'block' : 'hidden'}`}
                   ref={(el) => (projectsRef.current[index] = el)}
                 >
                   <Project {...project} />

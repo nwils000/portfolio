@@ -29,12 +29,10 @@ const FadeInWhenVisible = ({ children }) => {
       });
     } else if (!inView && targetRef.current) {
       if (animationRef.current) {
-        targetRef.current.style.opacity = '0'; // Force opacity to 0
+        targetRef.current.style.opacity = '0';
 
-        // Save original animation settings
         const originalSettings = { ...animationRef.current };
 
-        // Reverse animation with a quicker duration
         animationRef.current = anime({
           ...originalSettings,
           opacity: [1, 0],

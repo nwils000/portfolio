@@ -3,18 +3,15 @@ import { CSSTransition } from 'react-transition-group';
 
 export default function Home() {
   const [load, setLoad] = useState(false);
-  const [isMobile, setIsMobile] = useState(false); // Set initial state to false
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 640);
 
-    // Run on mount
     checkMobile();
 
-    // Run on window resize
     window.addEventListener('resize', checkMobile);
 
-    // Clean up event listener on unmount
     return () => {
       window.removeEventListener('resize', checkMobile);
     };
